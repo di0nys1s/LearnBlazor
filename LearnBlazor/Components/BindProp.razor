@@ -30,9 +30,39 @@ It is also handling with checked by default. *@
         Selected Prop: @selectedProp
         @if (!string.IsNullOrEmpty(selectedProp))
         {
-        <p>Selected Value: @Product.ProductProperties.FirstOrDefault(x => x.Key == selectedProp)?.Value</p>
+            <p>Selected Value: @Product.ProductProperties.FirstOrDefault(x => x.Key == selectedProp)?.Value</p>
         }
     </div>
+</div>
+
+<div class="col-12 p-4">
+    <h2 class="text-primary">Product Table</h2>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Is Active</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in ProductList)
+        {
+            <tr>
+                <td><input type="text" @bind="@item.Name" @bind:event="oninput" /></td>
+                <td><input type="text" @bind="@item.Price" @bind:event="oninput"/></td>
+                <td><input type="checkbox" @bind="@item.IsActive"/></td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
+
+<div class="col-6">
+    @foreach (var item in ProductList)
+    {
+        <p>@item.Name [@item.Price] is @(item.IsActive ? "Active" : "Inactive")</p>
+    }
 </div>
 
 
@@ -53,4 +83,37 @@ It is also handling with checked by default. *@
             new() { Id = 3, Key = "Flavor", Value = "Rose" },
         }
     };
+
+    List<Product> ProductList = new();
+    
+    protected override void OnInitialized()
+    {
+        ProductList.Add(new()
+        {
+            Id = 1,
+            Name = "Midnight Blaze",
+            IsActive = false,
+            Price = 5.99,
+            ProductProperties = new List<Product_Prop>()
+            {
+                new Product_Prop { Id = 1, Key = "Flavor", Value = "Rose"},
+                new Product_Prop { Id = 2, Key = "Size", Value = "20oz"},
+                new Product_Prop { Id = 3, Key = "Color", Value="Purple" }
+            }
+        });
+
+        ProductList.Add(new()
+        {
+            Id = 2,
+            Name = "Blossom Lily",
+            IsActive = true,
+            Price = 10.59,
+            ProductProperties = new List<Product_Prop>()
+            {
+                new Product_Prop { Id = 1, Key = "Flavor", Value = "Lily" },
+                new Product_Prop { Id = 2, Key = "Size", Value = "18oz" },
+                new Product_Prop {Id = 3,Key = "Color",Value = "White"}
+            }
+        });
+    }
 }
