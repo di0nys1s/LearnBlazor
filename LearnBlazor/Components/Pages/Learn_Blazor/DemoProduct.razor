@@ -2,30 +2,23 @@
 
 <div>
     <h3 class="text-primary">Demo Product</h3>
+    <p>Favourite Count: @FavouriteCount </p>
+    <p>Selected Product: @SelectedProductName</p> <br/>
     <div class="p-2 mt-2">
         <div class="row">
             @foreach (var item in ProductList)
             {
-                <div class="bg-light border col-6">
-                    <h4>Product @item.Id</h4>
-                    <p>Name - @item.Name</p>
-                    <p>Show properties <input type="checkbox" @bind="@item.IsActive" /></p>
-                    
-                    @if (item.IsActive)
-                    {
-                        @foreach (var prop in @item.ProductProperties)
-                        {
-                            <p>@prop.Key - @prop.Value</p>
-                        }
-                    }
-                    <button @onclick="() => deleteProduct(item.Id)" class="btn btn-danger">Delete</button>
-                </div>
+                <_ProductComponent Product="@item" OnFavouriteUpdated="FavouriteCountChanged" OnProductSelected="ProductSelected" />
             }
         </div>
     </div>
 </div>
 
 @code {
+    public int FavouriteCount { get; set; } = 0;
+    public string SelectedProductName { get; set; }
+    
+        
     List<Product> ProductList = new();
 
     private void deleteProduct(int productId)
@@ -67,5 +60,22 @@
                 new Product_Prop {Id = 3,Key = "Color",Value = "White"}
             }
         });
+    }
+
+    protected void FavouriteCountChanged(bool isSelected)
+    {
+        if (isSelected)
+        {
+            FavouriteCount++;
+        }
+        else
+        {
+            FavouriteCount--;
+        }
+    }
+
+    protected void ProductSelected(string productName)
+    {
+        SelectedProductName = productName;
     }
 }
