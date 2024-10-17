@@ -1,0 +1,33 @@
+@page "/learnBlazor/parentComponent"
+
+<h3>ParentComponent</h3>
+
+<CascadingValue Value="@MessageForGrandChild" Name="Message">
+    <CascadingValue Value="@NumberForGrandChild" Name="LuckyNumber">
+        <_ChildComponent OnButtonClick="ShowMessage" Title="This title is a parameter from parent component" MessageForGrandChild="This message is sent from Parent Component to GrandChild component">
+            <ChildContent>
+                This is child content
+            </ChildContent>
+            <Children>
+                This is a custom render children content
+            </Children>
+        </_ChildComponent>
+    </CascadingValue>
+</CascadingValue>
+
+<p>@messageText</p>
+
+<_ChildComponent Title="This title is a parameter from parent component to Child Component">
+    This is only child content when there is only one content
+</_ChildComponent>
+
+@code {
+    public string MessageForGrandChild = "This message is sent from Parent Component to GrandChild component";
+    public string NumberForGrandChild = "9"; 
+    public string messageText = "";
+
+    private void ShowMessage()
+    {
+        messageText = "Button inside the child component is clicked";
+    }
+}

@@ -42,12 +42,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9MZWFybl9CbGF6b3IvRGVtb1Byb2R1Y3QucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/bseyhan/Desktop/DOCS/di0nys1s/src/dotnet/LearnBlazor/LearnBlazor/Components/Pages/Learn_Blazor/LearnBlazorComponents/_ChildComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9MZWFybl9CbGF6b3IvTGVhcm5CbGF6b3JDb21wb25lbnRzL19DaGlsZENvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/bseyhan/Desktop/DOCS/di0nys1s/src/dotnet/LearnBlazor/LearnBlazor/Components/Pages/Learn_Blazor/LearnBlazorComponents/_DeleteButtonComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9MZWFybl9CbGF6b3IvTGVhcm5CbGF6b3JDb21wb25lbnRzL19EZWxldGVCdXR0b25Db21wb25lbnQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/bseyhan/Desktop/DOCS/di0nys1s/src/dotnet/LearnBlazor/LearnBlazor/Components/Pages/Learn_Blazor/LearnBlazorComponents/_GrandChildComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9MZWFybl9CbGF6b3IvTGVhcm5CbGF6b3JDb21wb25lbnRzL19HcmFuZENoaWxkQ29tcG9uZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/bseyhan/Desktop/DOCS/di0nys1s/src/dotnet/LearnBlazor/LearnBlazor/Components/Pages/Learn_Blazor/LearnBlazorComponents/_ProductComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9MZWFybl9CbGF6b3IvTGVhcm5CbGF6b3JDb21wb25lbnRzL19Qcm9kdWN0Q29tcG9uZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/bseyhan/Desktop/DOCS/di0nys1s/src/dotnet/LearnBlazor/LearnBlazor/Components/Pages/Learn_Blazor/ParentComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9MZWFybl9CbGF6b3IvUGFyZW50Q29tcG9uZW50LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/bseyhan/Desktop/DOCS/di0nys1s/src/dotnet/LearnBlazor/LearnBlazor/Components/Pages/Weather.razor]

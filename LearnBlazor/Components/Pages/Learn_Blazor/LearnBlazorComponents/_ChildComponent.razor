@@ -1,0 +1,35 @@
+<div>
+    <div class="alert alert-info">
+        @Title
+    </div>
+    @if (ChildContent != null)
+    {
+        <div class="alert alert-warning">
+            @ChildContent
+        </div>
+    }
+
+    @if (Children != null)
+    {
+        <div class="alert alert-dismissible">
+            @Children
+        </div>
+    }
+
+    @if (OnButtonClick.HasDelegate)
+    {
+        <button class="btn btn-danger" @onclick="OnButtonClick">Click me!</button>
+    }
+
+ 
+    <_GrandChildComponent />
+</div>
+
+
+@code {
+    [Parameter] public string? Title { get; set; }
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+    [Parameter] public RenderFragment? Children { get; set; }
+    [Parameter] public EventCallback OnButtonClick { get; set; }
+    [Parameter] public string? MessageForGrandChild { get; set; }
+}
