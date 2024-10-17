@@ -1,7 +1,6 @@
-<button class="btn btn-danger">Delete</button>
+<button @onclick="OnDeleteButtonClicked" class="btn btn-danger">Delete</button>
 
 @code {
-    [Parameter]
-    public int ProductId { get; set; }
-
+    [Parameter] 
+    public EventCallback OnDeleteButtonClicked { get; set; }
 }
