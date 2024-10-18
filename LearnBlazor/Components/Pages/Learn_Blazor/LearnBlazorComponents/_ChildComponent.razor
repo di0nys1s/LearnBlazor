@@ -1,3 +1,5 @@
+@inject IJSRuntime JSRuntime
+
 <div>
     <div class="alert alert-info">
         @Title
@@ -32,4 +34,11 @@
     [Parameter] public RenderFragment? Children { get; set; }
     [Parameter] public EventCallback OnButtonClick { get; set; }
     [Parameter] public string? MessageForGrandChild { get; set; }
+    
+    public async Task ToastrSuccess()
+    {
+        // await JSRuntime.InvokeVoidAsync("showToastr", "success", "This is a success message");
+        await JSRuntime.ToastrSuccess("This is a success message");
+    }
+
 }

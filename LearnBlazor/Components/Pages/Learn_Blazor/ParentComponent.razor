@@ -4,7 +4,7 @@
 
 <CascadingValue Value="@MessageForGrandChild" Name="Message">
     <CascadingValue Value="@NumberForGrandChild" Name="LuckyNumber">
-        <_ChildComponent OnButtonClick="ShowMessage" Title="This title is a parameter from parent component" MessageForGrandChild="This message is sent from Parent Component to GrandChild component">
+        <_ChildComponent @ref="childComp" OnButtonClick="ShowMessage" Title="This title is a parameter from parent component" MessageForGrandChild="This message is sent from Parent Component to GrandChild component">
             <ChildContent>
                 This is child content
             </ChildContent>
@@ -21,7 +21,10 @@
     This is only child content when there is only one content
 </_ChildComponent>
 
+<button @onclick="() => childComp.ToastrSuccess()" class="btn btn-success">Toastr Success</button>
+
 @code {
+    private _ChildComponent childComp;
     public string MessageForGrandChild = "This message is sent from Parent Component to GrandChild component";
     public string NumberForGrandChild = "9"; 
     public string messageText = "";
