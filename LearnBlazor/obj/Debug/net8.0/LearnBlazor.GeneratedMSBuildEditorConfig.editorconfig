@@ -58,12 +58,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9MZWFybl9CbGF6b3IvTGVhcm5CbGF6b3JDb21wb25lbnRzL19HcmFuZENoaWxkQ29tcG9uZW50LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/bseyhan/Desktop/DOCS/di0nys1s/src/dotnet/LearnBlazor/LearnBlazor/Components/Pages/Learn_Blazor/LearnBlazorComponents/_LifeCycleChildComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9MZWFybl9CbGF6b3IvTGVhcm5CbGF6b3JDb21wb25lbnRzL19MaWZlQ3ljbGVDaGlsZENvbXBvbmVudC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/bseyhan/Desktop/DOCS/di0nys1s/src/dotnet/LearnBlazor/LearnBlazor/Components/Pages/Learn_Blazor/LearnBlazorComponents/_ProductComponent.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9MZWFybl9CbGF6b3IvTGVhcm5CbGF6b3JDb21wb25lbnRzL19Qcm9kdWN0Q29tcG9uZW50LnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/bseyhan/Desktop/DOCS/di0nys1s/src/dotnet/LearnBlazor/LearnBlazor/Components/Pages/Learn_Blazor/LearnRouting.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9MZWFybl9CbGF6b3IvTGVhcm5Sb3V0aW5nLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/bseyhan/Desktop/DOCS/di0nys1s/src/dotnet/LearnBlazor/LearnBlazor/Components/Pages/Learn_Blazor/LifeCycle.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9MZWFybl9CbGF6b3IvTGlmZUN5Y2xlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/bseyhan/Desktop/DOCS/di0nys1s/src/dotnet/LearnBlazor/LearnBlazor/Components/Pages/Learn_Blazor/ParentComponent.razor]
