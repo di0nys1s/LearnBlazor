@@ -1,0 +1,93 @@
+@page "/blazor-forms";
+
+@* For more information on Blazor forms, see the following link: *@
+@* https://learn.microsoft.com/en-us/aspnet/core/blazor/forms/input-components?view=aspnetcore-8.0 *@
+
+<div class="col-12 offset-md-2 col-md-8 border">
+    <div class="text-center pt-4">
+        <h2 class="text-success">Products</h2>
+        <hr />
+    </div>
+    <div class="mx-2 px-2">
+        <EditForm FormName="ProductCreate" Model="Product" OnValidSubmit="CreateProduct" >
+            <DataAnnotationsValidator />
+            @* <ValidationSummary /> *@
+            <div class="form-group py-2">
+                <label for="ProductName">Product Name</label>
+                <InputText id="ProductName" class="form-control" @bind-Value="Product.Name"/>
+                <ValidationMessage For="@(() => Product.Name)" />
+            </div>
+            <div class="form-group py-2">
+                <label for="ProductPrice">Product Price</label>
+                <InputNumber id="ProductPrice" class="form-control" @bind-Value="Product.Price"/>
+                <ValidationMessage For="@(() => Product.Price)" />
+            </div>
+            <div class="form-group py-2">
+                <label for="ProductPrice">Product Category</label>
+                <InputSelect id="ProductCategory" class="form-control" @bind-Value="Product.Category">
+                    @foreach(var item in Enum.GetValues(typeof(Category)))
+                    {
+                        <option value="@item">@item</option>
+                    }
+                </InputSelect>
+            </div>
+            <div class="form-group py-2">
+                <label for="ProductActive">Is Active</label>
+                <InputCheckbox id="ProductActive" @bind-Value="Product.IsActive"/>
+            </div>
+            <div class="form-group py-2">
+                <label for="ProductAvailableAfter">Available After</label>
+                <InputDate id="ProductAvailableAfter" class="form-control" @bind-Value="Product.AvailableDate"/>
+            </div>
+            <button class="btn btn-primary my-3" type="submit">Create Product</button>
+            <p>
+                @if (IsProcessing)
+                {
+                    <span class="text-success">Processing...</span>
+                }
+            </p>
+        </EditForm>
+    </div>
+    @if (newProduct is not null)
+    {
+        <hr />
+        <div class="mx-2 px-2">
+            <h4 class="text-success">New Product</h4>
+            <p>Product Name: @newProduct.Name</p>
+            <p>Product Price: @newProduct.Price</p>
+            <p>Product Category: @newProduct.Category</p>
+            <p>Is Active: @newProduct.IsActive</p>
+            <p>Available After: @newProduct.AvailableDate</p>
+        </div>
+    }
+</div>
+
+@code {
+    // This attribute indicates that the Product object will be supplied from the form data.
+    // Specify the form name when there are multiple forms on the page.
+    [SupplyParameterFromForm(FormName = "ProductCreate")]
+    public Product Product { get; set; } = new Product();
+    
+    private bool IsProcessing { get; set; }
+    private Product newProduct { get; set; }
+    
+    private async Task CreateProduct()
+    {
+        IsProcessing = true;
+        await Task.Delay(2000);
+        newProduct = Product;
+        IsProcessing = false;
+        // Clear the filled form
+        Product = new();
+    }
+    
+    // You can assign below into a form attribute called OnInvalidSubmit to handle invalid form submission
+    // private async Task CreateProductInvalid()
+    // {
+    //     IsProcessing = true;
+    //     
+    //     await Task.Delay(5000);
+    //     
+    //     IsProcessing = false;
+    // }
+}

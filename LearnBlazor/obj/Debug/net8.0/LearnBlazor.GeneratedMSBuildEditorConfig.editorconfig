@@ -38,6 +38,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9MZWFybl9CbGF6b3IvQmluZFByb3AucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/bseyhan/Desktop/DOCS/di0nys1s/src/dotnet/LearnBlazor/LearnBlazor/Components/Pages/Learn_Blazor/BlazorForms.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9MZWFybl9CbGF6b3IvQmxhem9yRm9ybXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/bseyhan/Desktop/DOCS/di0nys1s/src/dotnet/LearnBlazor/LearnBlazor/Components/Pages/Learn_Blazor/Blazorjs.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9MZWFybl9CbGF6b3IvQmxhem9yanMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
